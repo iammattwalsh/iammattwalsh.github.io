@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@390&family=Indie+Flower&display=swap');
+
+/* 
+font-family: 'Comfortaa', cursive;
+font-family: 'Indie Flower', cursive;
+*/
+
+body {
+    background-color: #061826;
+}
+
+header {
+
+}
+
+nav {
+
+}
+
+main {
+    margin: 20px;
+}
+
+article {
+
+}
+
+section {
+
+}
+
+footer {
+
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 6rem;
+    margin: 20px 0px 20px 0px;
+}
+
+h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+    margin: 20px 0px 20px 0px;
+}
+
+h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    margin: 20px 0px 20px 0px;
+}
+
+.hi {
+    animation: hi 1s linear 1 forwards;
+    opacity: 0;
+}
+
+@keyframes hi {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.iam {
+    animation: iam 1s linear 1s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes iam {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.mattwalsh {
+    animation: mattwalsh 1s linear 1s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes mattwalsh {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: #894DA5; opacity: 1;}
+}
+
+.dotcom {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    animation: dotcom 1s linear 2s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes dotcom {
+    0% {color: #F05365; opacity: 0;}
+    50% {color: #F05365; opacity: 1;}
+    100% {color: #F05365; opacity: 0;}
+}
+
+.ima {
+    animation: ima 1s linear 3s 1 forwards;
+    opacity: 0;
+    color: white;
+}
+
+@keyframes ima {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.fullstack {
+    animation: fullstack 1s linear 3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes fullstack {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: #06AED5; opacity: 1;}
+}
+
+.basedin {
+    animation: basedin 1s linear 4s 1 forwards;
+    opacity: 0;
+    color: white;
+}
+
+@keyframes basedin {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.portlandor {
+    animation: portlandor 1s linear 4s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes portlandor {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: #F05365; opacity: 1;}
+}
+
+.bio {
+    animation: bio 1s linear 5s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes bio {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.promise {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1rem;
+    animation: promise 1s linear 6s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes promise {
+    0% {color: white; opacity: 0;}
+    50% {color: white; opacity: 1;}
+    100% {color: #BBBE64; opacity: 1;}
+}
+
+.fornow {
+    animation: fornow 1s linear 7s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes fornow {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: white; opacity: 1;}
+}
+
+.email a {
+    animation: email 1s linear 7s 1 forwards;
+    opacity: 0;
+    text-decoration: none;
+}
+
+@keyframes email {
+    0% {color: #BBBE64; opacity: 0;}
+    50% {color: #BBBE64; opacity: 1;}
+    100% {color: #06AED5; opacity: 1;}
+}
