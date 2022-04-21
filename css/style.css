@@ -26,6 +26,7 @@ h3 {
 
 p {
     font-family: 'Comfortaa', cursive;
+    color: #061826;
 }
 
 .hi {
@@ -344,6 +345,7 @@ nav li a {
     font-weight: 600;
     padding: 10px;
     transition: .5s;
+    /* text-shadow: 2px 2px 4px #061826; */
 }
 
 section:nth-child(1) {
@@ -364,42 +366,42 @@ section:nth-child(2) {
 }
 
 section:nth-child(2) li a {
-    color: #894DA5;
+    color: #BBBE64;
 }
 
 section:nth-child(2) li a:hover, section:nth-child(2) .navcurrent {
     color: #F05365;
-    background: #894DA5;
+    background: #BBBE64;
 }
 
 section:nth-child(3) {
-    background: #894DA5;
+    background: #BBBE64;
 }
 
 section:nth-child(3) li a {
-    color: #06AED5;
+    color: #894DA5;
 }
 
 section:nth-child(3) li a:hover, section:nth-child(3) .navcurrent {
+    color: #BBBE64;
+    background: #894DA5;
+}
+
+section:nth-child(4) {
+    background: #894DA5;
+}
+
+section:nth-child(4) li a {
+    color: #06AED5;
+}
+
+section:nth-child(4) li a:hover, section:nth-child(4) .navcurrent {
     color: #894DA5;
     background: #06AED5;
 }
 
-section:nth-child(4) {
-    background: #06AED5;
-}
-
-section:nth-child(4) li a {
-    color: #BBBE64;
-}
-
-section:nth-child(4) li a:hover, section:nth-child(4) .navcurrent {
-    color: #06AED5;
-    background: #BBBE64;
-}
-
 section:nth-child(5) {
-    background: #BBBE64;
+    background: #06AED5;
 }
 
 section:nth-child(5) li a {
@@ -407,6 +409,6 @@ section:nth-child(5) li a {
 }
 
 section:nth-child(5) li a:hover, section:nth-child(5) .navcurrent {
-    color: #BBBE64;
+    color: #06AED5;
     background: #061826;
 }
