@@ -7,6 +7,8 @@ font-family: 'Indie Flower', cursive;
 
 body {
     background-color: #061826;
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -19,6 +21,7 @@ nav {
 
 main {
     margin: 20px;
+    max-width: 1440px;
 }
 
 article {
@@ -188,4 +191,8 @@ h3 {
     0% {color: #BBBE64; opacity: 0;}
     50% {color: #BBBE64; opacity: 1;}
     100% {color: #06AED5; opacity: 1;}
+}
+
+a:hover {
+    color: #F05365 !important;
 }
