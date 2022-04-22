@@ -9,20 +9,19 @@ body {
     background-color: #061826;
 }
 
-footer {
-
-}
-
 h1 {
     font-family: 'Comfortaa', cursive;
+    transition: .5s;
 }
 
 h2 {
     font-family: 'Comfortaa', cursive;
+    transition: .5s;
 }
 
 h3 {
     font-family: 'Comfortaa', cursive;
+    transition: .5s;
 }
 
 p {
@@ -55,6 +54,11 @@ p {
 .mattwalsh {
     animation: mattwalsh 1s linear .5s 1 forwards;
     opacity: 0;
+    transition: .5s;
+}
+
+.mattwalsh:hover {
+    text-shadow: 2px 2px #BBBE64, 4px 4px #06AED5, 6px 6px #F05365;
 }
 
 @keyframes mattwalsh {
@@ -90,6 +94,11 @@ p {
 .fullstack {
     animation: fullstack 1s linear 1.5s 1 forwards;
     opacity: 0;
+    transition: .5s;
+}
+
+.fullstack:hover {
+    text-shadow: 1px 1px #BBBE64, 2px 2px #F05365, 3px 3px #894DA5;
 }
 
 @keyframes fullstack {
@@ -113,62 +122,17 @@ p {
 .portlandor {
     animation: portlandor 1s linear 2s 1 forwards;
     opacity: 0;
+    transition: .5s;
+}
+
+.portlandor:hover {
+    text-shadow: 1px 1px #BBBE64, 2px 2px #06AED5, 3px 3px #894DA5;
 }
 
 @keyframes portlandor {
     0% {color: #BBBE64; opacity: 0;}
     50% {color: #BBBE64; opacity: 1;}
     100% {color: #F05365; opacity: 1;}
-}
-
-.bio {
-    animation: bio 1s linear 2.5s 1 forwards;
-    opacity: 0;
-}
-
-@keyframes bio {
-    0% {color: #BBBE64; opacity: 0;}
-    50% {color: #BBBE64; opacity: 1;}
-    100% {color: white; opacity: 1;}
-}
-
-.promise {
-    font-family: 'Indie Flower', cursive;
-    animation: promise 1s linear 3s 1 forwards;
-    opacity: 0;
-}
-
-@keyframes promise {
-    0% {color: white; opacity: 0;}
-    50% {color: white; opacity: 1;}
-    100% {color: #BBBE64; opacity: 1;}
-}
-
-.fornow {
-    animation: fornow 1s linear 3.5s 1 forwards;
-    opacity: 0;
-}
-
-@keyframes fornow {
-    0% {color: #BBBE64; opacity: 0;}
-    50% {color: #BBBE64; opacity: 1;}
-    100% {color: white; opacity: 1;}
-}
-
-.email a {
-    animation: email 1s linear 3.5s 1 forwards;
-    opacity: 0;
-    text-decoration: none;
-}
-
-@keyframes email {
-    0% {color: #BBBE64; opacity: 0;}
-    50% {color: #BBBE64; opacity: 1;}
-    100% {color: #06AED5; opacity: 1;}
-}
-
-.email a:hover {
-    color: #F05365 !important;
 }
 
 @media screen and (min-width: 1440px) {
@@ -187,15 +151,10 @@ p {
     .dotcom {
         font-size: 2rem;
     }
-    .promise {
-        font-size: 1.5rem;
-    }
-
     .skilllogo, image {
         width: 100px;
         height: 100px;
     }
-
     figcaption {
         font-size: 1rem;
     }
@@ -217,15 +176,10 @@ p {
     .dotcom {
         font-size: 1.5rem;
     }
-    .promise {
-        font-size: 1rem;
-    }
-
     .skilllogo, image {
         width: 100px;
         height: 100px;
     }
-
     figcaption {
         font-size: 1rem;
     }
@@ -247,15 +201,10 @@ p {
     .dotcom {
         font-size: 1rem;
     }
-    .promise {
-        font-size: 1rem;
-    }
-
     .skilllogo, image {
         width: 50px;
         height: 50px;
     }
-
     figcaption {
         font-size: .5rem;
     }
@@ -277,9 +226,6 @@ p {
     .dotcom {
         font-size: .75rem;
     }
-    .promise {
-        font-size: .75rem;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -297,9 +243,6 @@ p {
     }
     .dotcom {
         font-size: .75rem;
-    }
-    .promise {
-        font-size: .5rem;
     }
 }
 
@@ -374,7 +317,6 @@ nav li a {
     font-weight: 600;
     padding: 10px;
     transition: .5s;
-    /* text-shadow: 2px 2px 4px #061826; */
 }
 
 section:nth-child(1) {
@@ -468,6 +410,7 @@ figcaption {
     text-align: center;
     font-family: 'Comfortaa', cursive;
     color: white;
+    transition: .5s;
 }
 
 #skills .centerholder {
@@ -484,5 +427,31 @@ figcaption {
 }
 
 #skills svg:hover {
-  filter: drop-shadow(5px 5px #894DA5) grayscale(0%);
+    filter: drop-shadow(5px 5px #894DA5) grayscale(0%);
+}
+
+.emailme {
+    color: white;
+    transition: .5s;
+}
+
+.email a {
+    color: #894DA5;
+    text-decoration: none;
+    transition: .5s;
+    text-shadow: 1px 1px white, 2px 2px #BBBE64, 3px 3px #F05365;
+}
+
+.email a:hover {
+    color: #F05365;
+    text-shadow: 1px 1px #BBBE64, 2px 2px #894DA5, 3px 3px #061826;
+}
+
+figure {
+    transition: .5s;
+    margin: 20px;
+}
+
+.skilllogo, image {
+    transition: .5s;
 }
