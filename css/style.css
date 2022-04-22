@@ -6,6 +6,7 @@ font-family: 'Indie Flower', cursive;
 */
 
 body {
+    background-color: #061826;
 }
 
 footer {
@@ -189,6 +190,15 @@ p {
     .promise {
         font-size: 1.5rem;
     }
+
+    .skilllogo, image {
+        width: 100px;
+        height: 100px;
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -208,6 +218,15 @@ p {
         font-size: 1.5rem;
     }
     .promise {
+        font-size: 1rem;
+    }
+
+    .skilllogo, image {
+        width: 100px;
+        height: 100px;
+    }
+
+    figcaption {
         font-size: 1rem;
     }
 }
@@ -230,6 +249,15 @@ p {
     }
     .promise {
         font-size: 1rem;
+    }
+
+    .skilllogo, image {
+        width: 50px;
+        height: 50px;
+    }
+
+    figcaption {
+        font-size: .5rem;
     }
 }
 
@@ -311,7 +339,7 @@ section  {
 }
 
 nav {
-    bottom: 0px;
+    bottom: -1px;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -334,6 +362,7 @@ nav ul {
     justify-content: space-between;
     list-style-type: none;
     margin: 0px;
+    padding: 0px;
 }
 
 nav li {
@@ -411,4 +440,49 @@ section:nth-child(5) li a {
 section:nth-child(5) li a:hover, section:nth-child(5) .navcurrent {
     color: #06AED5;
     background: #061826;
+}
+
+.centerholder {
+    display: flex;
+    justify-content: center;
+}
+
+#bio h1 {
+    color: #894DA5;
+    text-shadow: 2px 2px white, 4px 4px #BBBE64, 6px 6px #06AED5;
+}
+
+#bio em {
+    color: white;
+    font-style: normal;
+    text-shadow: 1px 1px #BBBE64, 2px 2px #06AED5, 3px 3px #894DA5;
+    margin-right: 2px;
+}
+
+#skills h2 {
+    color: #F05365;
+    text-shadow: 1px 1px white, 2px 2px #06AED5, 3px 3px #894DA5;
+}
+
+figcaption {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+#skills .centerholder {
+    flex-wrap: wrap;
+}
+
+#skills figure:last-child {
+    margin-bottom: 50px;
+}
+
+#skills svg {
+    transition: .5s;
+    filter: drop-shadow(0px 0px #BBBE64) grayscale(100%);
+}
+
+#skills svg:hover {
+  filter: drop-shadow(5px 5px #894DA5) grayscale(0%);
 }
