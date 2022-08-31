@@ -145,117 +145,6 @@ p {
     100% {color: #F05365; opacity: 1;}
 }
 
-@media screen and (min-width: 1440px) {
-    h1 {
-        font-size: 8rem;
-        margin: 20px 0px 20px 0px;
-    }
-    h2 {
-        font-size: 4rem;
-        margin: 20px 0px 20px 0px;
-    }
-    h3 {
-        font-size: 2.5rem;
-        margin: 20px 0px 20px 0px;
-    }
-    .dotcom {
-        font-size: 2rem;
-    }
-    .skilllogo, image {
-        width: 100px;
-        height: 100px;
-    }
-    figcaption {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    h1 {
-        font-size: 6rem;
-        margin: 15px 0px 15px 0px;
-    }
-    h2 {
-        font-size: 3rem;
-        margin: 15px 0px 15px 0px;
-    }
-    h3 {
-        font-size: 2rem;
-        margin: 15px 0px 15px 0px;
-    }
-    .dotcom {
-        font-size: 1.5rem;
-    }
-    .skilllogo, image {
-        width: 100px;
-        height: 100px;
-    }
-    figcaption {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    h1 {
-        font-size: 4rem;
-        margin: 10px 0px 10px 0px;
-    }
-    h2 {
-        font-size: 2rem;
-        margin: 10px 0px 10px 0px;
-    }
-    h3 {
-        font-size: 1.3rem;
-        margin: 10px 0px 10px 0px;
-    }
-    .dotcom {
-        font-size: 1rem;
-    }
-    .skilllogo, image {
-        width: 50px;
-        height: 50px;
-    }
-    figcaption {
-        font-size: .5rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 3rem;
-        margin: 5px 0px 5px 0px;
-    }
-    h2 {
-        font-size: 1.5rem;
-        margin: 5px 0px 5px 0px;
-    }
-    h3 {
-        font-size: 1rem;
-        margin: 5px 0px 5px 0px;
-    }
-    .dotcom {
-        font-size: .75rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-        margin: 5px 0px 5px 0px;
-    }
-    h2 {
-        font-size: 1rem;
-        margin: 5px 0px 5px 0px;
-    }
-    h3 {
-        font-size: .75rem;
-        margin: 5px 0px 5px 0px;
-    }
-    .dotcom {
-        font-size: .75rem;
-    }
-}
-
 main {
     position: relative;
     width: 100%;
@@ -416,28 +305,41 @@ section:nth-child(5) li a:hover, section:nth-child(5) .navcurrent {
     text-shadow: 1px 1px white, 2px 2px #06AED5, 3px 3px #894DA5;
 }
 
+figure {
+    transition: .5s;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 figcaption {
     text-align: center;
     font-family: 'Comfortaa', cursive;
     color: white;
     transition: .5s;
+    margin-top: 10px;
 }
 
 #skills .centerholder {
     flex-wrap: wrap;
 }
 
+.skillrow {
+    display: flex;
+}
+
 #skills figure:last-child {
     margin-bottom: 50px;
 }
 
-#skills svg {
+#skills .skilllogo svg {
     transition: .5s;
     filter: drop-shadow(0px 0px #BBBE64) grayscale(100%);
 }
 
-#skills svg:hover {
-    filter: drop-shadow(5px 5px #894DA5) grayscale(0%);
+#skills .skilllogo svg:hover {
+    filter: drop-shadow(5px 5px #894DA5) grayscale(0%) /*opacity(100%)*/;
 }
 
 .emailme {
@@ -457,11 +359,117 @@ figcaption {
     text-shadow: 1px 1px #BBBE64, 2px 2px #894DA5, 3px 3px #061826;
 }
 
-figure {
-    transition: .5s;
-    margin: 20px;
-}
-
 .skilllogo, image {
     transition: .5s;
+}
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 8rem;
+        margin: 20px 0px 20px 0px;
+    }
+    h2 {
+        font-size: 4rem;
+        margin: 20px 0px 20px 0px;
+    }
+    h3 {
+        font-size: 2.5rem;
+        margin: 20px 0px 20px 0px;
+    }
+    .dotcom {
+        font-size: 2rem;
+    }
+    .skilllogo svg, image {
+        width: 100px;
+        height: 100px;
+    }
+    figcaption {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    h1 {
+        font-size: 6rem;
+        margin: 15px 0px 15px 0px;
+    }
+    h2 {
+        font-size: 3rem;
+        margin: 15px 0px 15px 0px;
+    }
+    h3 {
+        font-size: 2rem;
+        margin: 15px 0px 15px 0px;
+    }
+    .dotcom {
+        font-size: 1.5rem;
+    }
+    .skilllogo svg, image {
+        width: 100px;
+        height: 100px;
+    }
+    figcaption {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 4rem;
+        margin: 10px 0px 10px 0px;
+    }
+    h2 {
+        font-size: 2rem;
+        margin: 10px 0px 10px 0px;
+    }
+    h3 {
+        font-size: 1.3rem;
+        margin: 10px 0px 10px 0px;
+    }
+    .dotcom {
+        font-size: 1rem;
+    }
+    .skilllogo svg, image {
+        width: 50px;
+        height: 50px;
+    }
+    figcaption {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h3 {
+        font-size: 1rem;
+        margin: 5px 0px 5px 0px;
+    }
+    .dotcom {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h2 {
+        font-size: 1rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h3 {
+        font-size: .75rem;
+        margin: 5px 0px 5px 0px;
+    }
+    .dotcom {
+        font-size: .75rem;
+    }
 }
