@@ -333,28 +333,54 @@ figcaption {
     margin-bottom: 50px;
 }
 
-#skills .skilllogo svg {
+#skills .skilllogo svg, #contact .linklogo svg {
     transition: .5s;
     filter: drop-shadow(0px 0px #BBBE64) grayscale(100%);
 }
 
-#skills .skilllogo svg:hover {
-    filter: drop-shadow(5px 5px #894DA5) grayscale(0%) /*opacity(100%)*/;
+#skills .skilllogo svg:hover, #contact a:hover .linklogo svg {
+    filter: drop-shadow(5px 5px #894DA5) grayscale(0%);
 }
 
-.emailme {
+#contact.container {
+    align-items: center;
+}
+
+#contact p {
+    font-size: 2rem;
     color: white;
     transition: .5s;
 }
 
-.email a {
+#contact a {
+    text-decoration: none;
+}
+
+#contact a figcaption {
+    color: #894DA5;
+    text-shadow: 1px 1px #061826, 2px 2px #BBBE64, 3px 3px #F05365;
+}
+
+#contact a:hover figcaption {
+    color: #F05365;
+    text-shadow: 1px 1px #BBBE64, 2px 2px #894DA5, 3px 3px #061826;
+}
+
+.emailme {
+    font-weight: bold;
+    color: white;
+    transition: .5s;
+}
+
+.contactlink a {
+    font-weight: bold;
     color: #894DA5;
     text-decoration: none;
     transition: .5s;
-    text-shadow: 1px 1px white, 2px 2px #BBBE64, 3px 3px #F05365;
+    text-shadow: 1px 1px #061826, 2px 2px #BBBE64, 3px 3px #F05365;
 }
 
-.email a:hover {
+.contactlink a:hover {
     color: #F05365;
     text-shadow: 1px 1px #BBBE64, 2px 2px #894DA5, 3px 3px #061826;
 }
@@ -376,10 +402,14 @@ figcaption {
         font-size: 2.5rem;
         margin: 20px 0px 20px 0px;
     }
+    #contact p {
+        font-size: 2rem;
+        margin: .5em;
+    }
     .dotcom {
         font-size: 2rem;
     }
-    .skilllogo svg, image {
+    .skilllogo svg, .linklogo svg, image {
         width: 100px;
         height: 100px;
     }
@@ -401,10 +431,14 @@ figcaption {
         font-size: 2rem;
         margin: 15px 0px 15px 0px;
     }
+    #contact p {
+        font-size: 1.5rem;
+        margin: .5rem;
+    }
     .dotcom {
         font-size: 1.5rem;
     }
-    .skilllogo svg, image {
+    .skilllogo svg, .linklogo svg, image {
         width: 100px;
         height: 100px;
     }
@@ -426,10 +460,14 @@ figcaption {
         font-size: 1.3rem;
         margin: 10px 0px 10px 0px;
     }
+    #contact p {
+        font-size: 1rem;
+        margin: .5rem;
+    }
     .dotcom {
         font-size: 1rem;
     }
-    .skilllogo svg, image {
+    .skilllogo svg, .linklogo svg, image {
         width: 50px;
         height: 50px;
     }
@@ -451,6 +489,10 @@ figcaption {
         font-size: 1rem;
         margin: 5px 0px 5px 0px;
     }
+    #contact p {
+        font-size: .75rem;
+        margin: .5rem;
+    }
     .dotcom {
         font-size: .75rem;
     }
@@ -468,6 +510,10 @@ figcaption {
     h3 {
         font-size: .75rem;
         margin: 5px 0px 5px 0px;
+    }
+    #contact p {
+        font-size: .75rem;
+        margin: .5rem;
     }
     .dotcom {
         font-size: .75rem;
