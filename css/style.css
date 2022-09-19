@@ -288,6 +288,15 @@ section:nth-child(5) li a:hover, section:nth-child(5) .navcurrent {
     justify-content: center;
 }
 
+#bio .centerholder, #contact .centerholder {
+    flex-direction: column;
+    align-items: center;
+}
+
+#bio p {
+    text-align: center;
+}
+
 #bio h1 {
     color: #894DA5;
     text-shadow: 2px 2px white, 4px 4px #BBBE64, 6px 6px #06AED5;
@@ -298,6 +307,11 @@ section:nth-child(5) li a:hover, section:nth-child(5) .navcurrent {
     font-style: normal;
     text-shadow: 1px 1px #BBBE64, 2px 2px #06AED5, 3px 3px #894DA5;
     margin-right: 2px;
+    transition: .5s
+}
+
+#bio em:hover {
+    text-shadow: 2px 2px 2px #BBBE64, 4px 4px 2px #06AED5, 6px 6px 2px #894DA5;
 }
 
 #skills h2 {
@@ -325,7 +339,7 @@ figcaption {
     flex-wrap: wrap;
 }
 
-.skillrow {
+.skillrow, .contactrow {
     display: flex;
 }
 
@@ -457,7 +471,7 @@ figcaption {
         margin: 10px 0px 10px 0px;
     }
     h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin: 10px 0px 10px 0px;
     }
     #contact p {
@@ -486,7 +500,7 @@ figcaption {
         margin: 5px 0px 5px 0px;
     }
     h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
         margin: 5px 0px 5px 0px;
     }
     #contact p {
@@ -495,6 +509,10 @@ figcaption {
     }
     .dotcom {
         font-size: .75rem;
+    }
+
+    .skilllogo {
+        margin: 10px;
     }
 }
 
@@ -504,11 +522,11 @@ figcaption {
         margin: 5px 0px 5px 0px;
     }
     h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: 5px 0px 5px 0px;
     }
     h3 {
-        font-size: .75rem;
+        font-size: 1rem;
         margin: 5px 0px 5px 0px;
     }
     #contact p {
@@ -517,5 +535,9 @@ figcaption {
     }
     .dotcom {
         font-size: .75rem;
+    }
+
+    .skilllogo {
+        margin: 10px;
     }
 }
