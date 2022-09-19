@@ -516,7 +516,6 @@ figcaption {
     .dotcom {
         font-size: .75rem;
     }
-
     .skilllogo {
         margin: 10px;
     }
@@ -542,8 +541,31 @@ figcaption {
     .dotcom {
         font-size: .75rem;
     }
-
     .skilllogo {
         margin: 10px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    h1 {
+        font-size: 2rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: 5px 0px 5px 0px;
+    }
+    h3 {
+        font-size: 1rem;
+        margin: 5px 0px 5px 0px;
+    }
+    p {
+        margin: 10px;
+    }
+    .skilllogo {
+        margin: 5px;
+    }
+    #skills figure:last-child {
+        margin-bottom: 20px;
     }
 }
