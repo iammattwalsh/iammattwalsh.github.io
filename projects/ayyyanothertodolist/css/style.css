@@ -5,6 +5,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: linear-gradient(to bottom right, lavender, blueviolet);
+    height: 100vh;
 }
 
 section {
