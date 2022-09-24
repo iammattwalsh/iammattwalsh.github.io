@@ -16,6 +16,9 @@ colors
 
 body {
     background-color: #061826;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -143,12 +146,6 @@ p {
     0% {color: #BBBE64; opacity: 0;}
     50% {color: #BBBE64; opacity: 1;}
     100% {color: #F05365; opacity: 1;}
-}
-
-body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
 }
 
 main {
@@ -408,6 +405,69 @@ figcaption {
 .skilllogo, image {
     transition: .5s;
 }
+
+
+
+
+
+
+
+
+#projects {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #projects img {
+    max-width: 80%;
+    max-height: 80%;
+} */
+
+.test {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.test2 {
+    background-color: #061826;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.test2 img {
+    max-height: 100%;
+    width: 50%;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+/* .test2 header {
+    display: flex;
+    align-items: center;
+    height: 100%
+} */
+
+.test2 h1 {
+    width: 50%;
+    text-align: center;
+}
+
+.test3 {
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}
+
 
 @media screen and (min-width: 1440px) {
     h1 {
