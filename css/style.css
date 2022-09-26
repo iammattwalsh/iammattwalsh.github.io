@@ -406,20 +406,101 @@ figcaption {
     transition: .5s;
 }
 
-
-
-
-
-
-
-
 #projects {
     height: 100%;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 }
+
+.project-thumb-pair {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-thumb a {
+    text-decoration: none;
+}
+
+.project-thumb figure {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background-color: #061826;
+}
+
+.project-thumb .project-desc-short {
+    opacity: 0%;
+    color: white;
+    padding: 10px;
+    transition-delay: .5s;
+    transition-duration: .5s;
+}
+
+.project-thumb img {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    transition: .5s;
+}
+
+.project-thumb figcaption {
+    position: absolute;
+    width: 100%;
+    background-color: #06182681;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .5s;
+}
+
+.project-thumb figcaption p {
+    color: #06AED5;
+    margin: 0px;
+    padding: 10px;
+}
+
+.project-thumb a figcaption div {
+    height: calc(100%);
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    transition: .5s;
+}
+
+.project-thumb a:hover figcaption {
+    background-color: #061826;
+    bottom: 200px;
+}
+
+.project-thumb a:hover p {
+    opacity: 100%;
+}
+
+.project-thumb a:hover img {
+    opacity: 0;
+}
+
+.project-thumb a:hover figcaption div {
+    height: calc(100% + 200px);
+    box-shadow: 2px 2px #F05365, 4px 4px #BBBE64, 6px 6px #06AED5;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* #projects img {
     max-width: 80%;
@@ -432,6 +513,9 @@ figcaption {
     width: 100%;
     padding: 10px;
     padding-bottom: 50px;
+
+
+    display:none;
 }
 
 .test2 {
@@ -467,6 +551,14 @@ figcaption {
     width: 50%;
     background-color: red;
 }
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 1440px) {

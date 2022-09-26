@@ -1,0 +1,22 @@
+[
+    {
+        "name": "TopoTrail",
+        "short": "topotrail",
+        "preDesc": "Django, Vue.js, & Three.js project that parses GPS trail files and a builds 3D mesh with a trail overlay texture."
+    },
+    {
+        "name": "Hippos R Us",
+        "short": "hru",
+        "preDesc": "Materialize CSS exercise to create a fictional company landing page."
+    },
+    {
+        "name": "Ayyy Another To-Do List!",
+        "short": "aatdl",
+        "preDesc": "Vue.js to-do list exercise using localStorage to save between sessions."
+    },
+    {
+        "name": "Drink Decider 2000",
+        "short": "dd2k",
+        "preDesc": "Vue.js exercise using Axios for API calls and experiment with accordion panel layout."
+    }
+]

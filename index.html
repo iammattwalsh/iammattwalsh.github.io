@@ -32,6 +32,7 @@
     <link href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" rel="stylesheet"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <script src="https://unpkg.com/vue@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 
@@ -170,7 +171,28 @@
         <section>
             <div class="fullpage">
                 <div id="projects" class="container">
-                    <img src="images/uc.gif" alt="under construction">
+                    <div class="project-thumb-pair" v-for="pair in projectAssets">
+                        <div class="project-thumb" v-for="each in pair">
+                            <a href="#" @click="test">
+                                <figure>
+                                    <p class="project-desc-short">{{ each.preDesc }}</p>
+                                    <img :src="'projectassets/' + each.short + 'thumb.png'" :alt="'Thumbnail preview for ' + each.name">
+                                    <figcaption>
+                                        <p>
+                                            {{ each.name }}
+                                        </p>
+                                        <div></div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <div class="test">
                         <div class="test2">
                             <img src="projectassets/topotrail.png" alt="TopoTrail preview image">
@@ -179,6 +201,9 @@
                             </header> -->
                         </div>
                     </div>
+
+
+
                 </div>
                 <nav>
                     <ul>
