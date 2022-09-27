@@ -20,6 +20,7 @@ createApp({
     data () {
         return {
             projectAssets: [],
+            projectOpen: false,
         }
     },
     created() {
@@ -33,14 +34,24 @@ createApp({
                     this.projectAssets.push([resData[i], resData[i + 1]])
                 }
             })
-            // console.log(resData)
             console.log(this.projectAssets)
             });
         
     },
     methods: {
-        test() {
-            console.log('boop!')
+        test(thisProject) {
+            console.log(thisProject.short)
+        },
+        test2() {
+            // document.getElementById("testtest").style.transition = "1s"
+            if (this.projectOpen) {
+                this.projectOpen = false
+                // document.getElementById("testtest").style.opacity = 0
+            } else {
+                this.projectOpen = true
+                // document.getElementById("testtest").style.transition = "1s"
+                // document.getElementById("testtest").style.opacity = 1
+            }
         }
     }
 }).mount('#app')

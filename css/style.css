@@ -509,13 +509,20 @@ figcaption {
 
 .test {
     position: absolute;
+    height: 0%;
+    width: 0%;
+    padding: 0px;
+    /* padding-bottom: 45px; */
+    opacity: 0;
+    transition: opacity 2s;
+    z-index: 9999;
+}
+
+.active {
+    transition: opacity 2s;
     height: 100%;
     width: 100%;
-    padding: 10px;
-    padding-bottom: 50px;
-
-
-    display:none;
+    opacity: 1;
 }
 
 .test2 {

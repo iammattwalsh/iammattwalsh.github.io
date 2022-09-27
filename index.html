@@ -173,7 +173,7 @@
                 <div id="projects" class="container">
                     <div class="project-thumb-pair" v-for="pair in projectAssets">
                         <div class="project-thumb" v-for="each in pair">
-                            <a href="#" @click="test">
+                            <a href="#" @click="test(each), test2()">
                                 <figure>
                                     <p class="project-desc-short">{{ each.preDesc }}</p>
                                     <img :src="'projectassets/' + each.short + 'thumb.png'" :alt="'Thumbnail preview for ' + each.name">
@@ -192,13 +192,13 @@
 
 
 
-
-                    <div class="test">
-                        <div class="test2">
+                    <div class="test" :class="{active: projectOpen}">
+                        <div class="test2" id="testtest">
                             <img src="projectassets/topotrail.png" alt="TopoTrail preview image">
                             <h1>TopoTrail</h1>
                             <!-- <header>
                             </header> -->
+                            <a href="#" @click="test2">close!!!</a>
                         </div>
                     </div>
 
