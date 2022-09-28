@@ -172,15 +172,15 @@
             <div class="fullpage">
                 <div id="projects" class="container">
                     <div id="project-holder">
-                        <div class="project-page" v-for="page in projectAssets">
+                        <div class="project-page" v-for="page in projectPages">
                             <div class="project-thumb" v-for="each in page">
                                 <a href="#" @click="whichProject(each), projectFade()">
                                     <figure>
-                                        <p class="project-desc-short">{{ each.preDesc }}</p>
-                                        <img :src="'projectassets/' + each.short + 'thumb.png'" :alt="'Thumbnail preview for ' + each.name">
+                                        <p class="project-desc-short">{{ projectAssets[each].preDesc }}</p>
+                                        <img :src="'projectassets/' + projectAssets[each].short + 'thumb.png'" :alt="'Thumbnail preview for ' + projectAssets[each].name">
                                         <figcaption>
                                             <p>
-                                                {{ each.name }}
+                                                {{ projectAssets[each].name }}
                                             </p>
                                             <div></div>
                                         </figcaption>
@@ -206,15 +206,50 @@
 
 
 
-<!-- Pardon the mess, I'm playing with layouts and transitions!
-                    <div class="test" :class="[ projectOpen ? 'active' : 'inactive' ]">
-                        <div class="test2" id="testtest" :class="[ projectOpen ? 'active' : 'inactive' ]">
-                            <img src="projectassets/topotrail.png" alt="TopoTrail preview image">
-                            <h1 :class="[ projectOpen ? 'active' : 'inactive' ]">TopoTrail</h1>
-                            <a href="#" @click="projectFade">close!!!</a>
+<!-- Hidden while completing -->
+                    <!-- <div id="projectdetailholder" :class="[ projectOpen ? 'active' : 'inactive' ]">
+                        <div id="projectdetailimage" :class="{ projectfade : projectDetailFade }">
+
                         </div>
-                    </div> 
--->
+                        <div id="projectdetailinfo" :class="{ projectfade : projectDetailFade }">
+                            <h2>{{ projectCurrent.name }}</h2>
+                            <div id="projectlinks">
+                                <a href="#">Visit {{ projectCurrent.name }}</a>
+                                <a href="#">View on GitHub</a>
+                            </div>
+                            <div id="projectinfo">
+                                <p>blah blah blah</p>
+                                <ul>
+                                    <li>one</li>
+                                    <li>two</li>
+                                    <li>three</li>
+                                </ul>
+                            </div>
+                            <div class="pagination">
+                                <a href="#" id="larrproj" @click="projectTrans(projectPrev.short)" :class="{ arrdisable : !projectPrev }">
+                                    <svg height="50" width="30">
+                                        <polyline class="larr" points="25,5 10,25 25,45" />
+                                    </svg>
+                                    <p>
+                                        {{ projectPrev.name }}
+                                    </p>
+                                </a>
+                                <a href="#" id="closeproj" @click="projectFade">
+                                    <p>
+                                        CLOSE
+                                    </p>
+                                </a>
+                                <a href="#" id="rarrproj" @click="projectTrans(projectNext.short)" :class="{ arrdisable : !projectNext }">
+                                    <p>
+                                        {{ projectNext.name }}
+                                    </p>
+                                    <svg height="50" width="30">
+                                        <polyline class="rarr" points="5,5 20,25 5,45" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
 
 
 
