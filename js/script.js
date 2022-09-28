@@ -1,64 +1,85 @@
-// import jsonTest from 'projectassets.json'
-// console.log(jsonTest)
-// export default {
-//     data() {
-//         return {
-//             myJson: json
-//         }
-//     }
-// }
-// projectsJson = fetch('projectassets.json').json()
-// fetch('projectassets.json').then(res => projectsJson = res.json())
-// generate app
-
-// import jsonObject from 'projectassets.json'
-
-
-
 const { createApp } = Vue
 createApp({
     data () {
         return {
             projectAssets: [],
             projectOpen: false,
+            projectTileTotal: 0,
+            projectTileSize: 240,
+            projectTilePerPage: 0,
+            projectPageHolder: null,
+            projectPagesTotal: 0,
+            projectPageCurrent: 1,
         }
     },
     created() {
-        axios ({
-            method: 'get',
-            url: 'projectassets.json',
-        }).then(res => {
-            let resData = Object.values(res.data)
-            Object.values(res.data).forEach((_, i) => {
-                if (i % 2 == 0) {
-                    this.projectAssets.push([resData[i], resData[i + 1]])
-                }
-            })
-            console.log(this.projectAssets)
-            });
-        
+        this.debounce(this.getDimensions())
+        window.addEventListener('resize', this.debounce(this.getDimensions))
+    },
+    mounted() {
+        this.projectPageHolder = document.getElementById('project-holder')
     },
     methods: {
-        test(thisProject) {
+        debounce(func, time = 250) {
+            let timer
+            return function(event) {
+                if(timer) clearTimeout(timer)
+                timer = setTimeout(func, time, event)
+            }
+        },
+        getDimensions() {
+            let winX = window.innerWidth - 40 // 20 for each margin
+            let winY = window.innerHeight - 180 // 20 for top margin, 40 for bottom margin/nav, 60 for arrows, 60 for hover overflow
+            if (winX > 600 && winY > 550) {
+                this.projectTileSize = 240
+            } else {
+                this.projectTileSize = 170
+            }
+            this.projectTilePerPage = Math.floor(winX / this.projectTileSize) * Math.floor(winY / this.projectTileSize)
+            // console.log(`tiles tot: ${this.projectTilePerPage}`)
+            this.getAssets()
+        },
+        getAssets() {
+            this.projectAssets = []
+            axios ({
+                method: 'get',
+                url: 'projectassets.json',
+            }).then(res => {
+                this.projectTileTotal = Object.values(res.data).length
+                this.projectPagesTotal = Math.ceil(this.projectTileTotal / this.projectTilePerPage)
+                this.projectPageCurrent = 1
+                this.projectPageHolder.scrollLeft = 0
+                let j = 0
+                Object.values(res.data).forEach((_,i) => {
+                    if (i % this.projectTilePerPage == 0) {
+                        this.projectAssets.push([])
+                        for (var k = 0; k < this.projectTilePerPage; k++) {
+                            if (i + k < this.projectTileTotal)
+                            this.projectAssets[j].push(Object.values(res.data)[i + k])
+                        }
+                        j++
+                    }
+                })
+            })
+        },
+        changeProjectPage(direction) {
+            if (direction == 'r' && this.projectPageCurrent < this.projectPagesTotal) {
+                this.projectPageCurrent ++
+            } else if (direction == 'l' && this.projectPageCurrent > 1) {
+                this.projectPageCurrent --
+            }
+            this.projectPageHolder.scrollLeft = this.projectPageHolder.clientWidth * (this.projectPageCurrent - 1)
+        },
+        whichProject(thisProject) {
             console.log(thisProject.short)
         },
-        test2() {
-            // document.getElementById("testtest").style.transition = "1s"
-            if (this.projectOpen) {
-                this.projectOpen = false
-                // document.getElementById("testtest").style.opacity = 0
-            } else {
-                this.projectOpen = true
-                // document.getElementById("testtest").style.transition = "1s"
-                // document.getElementById("testtest").style.opacity = 1
-            }
+        projectFade() {
+            this.projectOpen = !this.projectOpen
         }
     }
 }).mount('#app')
 
 
-// add overflow:hidden; to main on popup, remove on close & nav interaction
-// ^^^ consider if this is good for UX
+// on scrolling highlight close button on projects page
 
 // add close button and prev/next buttons (with project names)
-

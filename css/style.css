@@ -173,7 +173,7 @@ section  {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin: 20px;
+    margin: 20px 20px 40px 20px;
 }
 
 .container {
@@ -410,15 +410,24 @@ figcaption {
     height: 100%;
     width: 100%;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
 }
 
-.project-thumb-pair {
+#project-holder {
+    display: flex;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.project-page {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    margin-top: 60px;
 }
 
 .project-thumb a {
@@ -450,7 +459,7 @@ figcaption {
 .project-thumb figcaption {
     position: absolute;
     width: 100%;
-    background-color: #06182681;
+    background-color: #061826BF;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0px;
@@ -492,37 +501,63 @@ figcaption {
     box-shadow: 2px 2px #F05365, 4px 4px #BBBE64, 6px 6px #06AED5;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* #projects img {
-    max-width: 80%;
-    max-height: 80%;
-} */
-
-.test {
-    position: absolute;
-    height: 0%;
-    width: 0%;
-    padding: 0px;
-    /* padding-bottom: 45px; */
-    opacity: 0;
-    transition: opacity 2s;
-    z-index: 9999;
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.active {
-    transition: opacity 2s;
+.pagination p {
+    color: #06AED5;
+    margin: 10px;
+    transition: .5s;
+}
+
+.pagination a {
+    height: 50px;
+    width: 30px;
+}
+
+.pagination a svg {
+    transition: .5s;
+}
+
+.arrdisable {
+    opacity: 0;
+    cursor: default;
+}
+
+.rarr, .larr {
+    fill: none;
+    stroke: #06AED5;
+    stroke-width: 5px;
+    transition: .5s;
+}
+
+a:hover .rarr{
+    filter: drop-shadow(2px 0px #BBBE64) drop-shadow(2px 0px #F05365) drop-shadow(2px 0px white);
+}
+
+a:hover .larr{
+    filter: drop-shadow(-2px 0px #BBBE64) drop-shadow(-2px 0px #F05365) drop-shadow(-2px 0px white);
+}
+
+
+
+
+
+
+
+/* Pardon the mess, I'm playing with layouts and transitions!
+.test {
+    position: absolute;
     height: 100%;
     width: 100%;
-    opacity: 1;
+    padding: 0px;
+    opacity: 0;
+    z-index: 9999;
 }
 
 .test2 {
@@ -542,12 +577,6 @@ figcaption {
     object-position: 0px 0px;
 }
 
-/* .test2 header {
-    display: flex;
-    align-items: center;
-    height: 100%
-} */
-
 .test2 h1 {
     width: 50%;
     text-align: center;
@@ -558,6 +587,24 @@ figcaption {
     width: 50%;
     background-color: red;
 }
+
+.active {
+    transition: opacity .5s linear 0s, height 0s linear 0s, width 0s linear 0s, padding 0s linear 0s, font-size 0s linear 0s;
+    opacity: 1;
+}
+
+.inactive {
+    transition: opacity .5s linear 0s, height 0s linear .5s, width 0s linear .5s, padding 0s linear .5s, font-size 0s linear .5s !important;
+    opacity: 0 !important;
+    width: 0% !important;
+    padding: 0px !important;
+    font-size: 0 !important;
+}
+
+.dontscroll {
+    overflow: hidden;
+} */
+
 
 
 
@@ -678,6 +725,30 @@ figcaption {
     .skilllogo {
         margin: 10px;
     }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -703,6 +774,30 @@ figcaption {
     .skilllogo {
         margin: 10px;
     }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
+    }
 }
 
 @media screen and (max-height: 550px) {
@@ -726,5 +821,32 @@ figcaption {
     }
     #skills figure:last-child {
         margin-bottom: 20px;
+    }
+    .project-thumb p {
+        margin: 0px;
+    }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
     }
 }
