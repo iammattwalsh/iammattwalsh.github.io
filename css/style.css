@@ -15,6 +15,7 @@ colors
 */
 
 body {
+    font-family: 'Comfortaa', cursive;
     background-color: #061826;
     position: fixed;
     width: 100%;
@@ -22,22 +23,18 @@ body {
 }
 
 h1 {
-    font-family: 'Comfortaa', cursive;
     transition: .5s;
 }
 
 h2 {
-    font-family: 'Comfortaa', cursive;
     transition: .5s;
 }
 
 h3 {
-    font-family: 'Comfortaa', cursive;
     transition: .5s;
 }
 
 p {
-    font-family: 'Comfortaa', cursive;
     color: #061826;
 }
 
@@ -544,53 +541,145 @@ a:hover .larr{
     filter: drop-shadow(-2px 0px #BBBE64) drop-shadow(-2px 0px #F05365) drop-shadow(-2px 0px white);
 }
 
-
-
-
-
-
-
-/* Pardon the mess, I'm playing with layouts and transitions!
-.test {
+#projectdetailholder {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     padding: 0px;
     opacity: 0;
+    background-color: #061826;
+    color: white;
+    display: flex;
     z-index: 9999;
 }
 
-.test2 {
-    background-color: #061826;
+#projectdetailimage {
+    background-color: #06AED581;/**/
     height: 100%;
-    width: 100%;
-    padding: 10px;
-    color: white;
+    width: 50%;
+    transition: opacity .5s;
+}
+
+#projectdetailinfo {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    transition: opacity .5s;
 }
 
-.test2 img {
-    max-height: 100%;
-    width: 50%;
-    object-fit: cover;
-    object-position: 0px 0px;
+.projectfade {
+    opacity: 0;
 }
 
-.test2 h1 {
-    width: 50%;
+#projectdetailholder h2 {
+    width: 100%;
     text-align: center;
 }
 
-.test3 {
-    height: 100%;
-    width: 50%;
-    background-color: red;
+#projectlinks {
+    display: flex;
+    justify-content: center;
 }
 
+#projectlinks a {
+    margin: 10px;
+}
+
+#projectinfo {
+    flex: 1 1 auto;
+    padding: 10px;
+}
+
+#projectdetailholder .pagination {
+    margin-bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+}
+
+#projectdetailholder a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F05365;
+    transition: opacity .5s, text-shadow .5s;
+}
+
+#projectdetailholder .pagination a p {
+    color: #F05365;
+    margin: 5px;
+    width: calc(100% - 30px);
+}
+
+/* will change so text is centered in element, aligned to edges */
+
+#larrproj {
+    width: 40%;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#closeproj {
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+#rarrproj {
+    width: 40%;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#projectdetailholder .rarr, #projectdetailholder .larr {
+    stroke: #F05365;
+}
+
+#projectdetailholder a:hover p, #projectlinks a:hover {
+    text-shadow: 1px 1px #BBBE64, 2px 2px #894DA5, 3px 3px #06AED5;
+}
+
+#projectdetailholder .pagination a:hover .rarr{
+    filter: drop-shadow(2px 0px #BBBE64) drop-shadow(2px 0px #894DA5) drop-shadow(2px 0px #06AED5);
+}
+
+#projectdetailholder .pagination a:hover .larr{
+    filter: drop-shadow(-2px 0px #BBBE64) drop-shadow(-2px 0px #894DA5) drop-shadow(-2px 0px #06AED5);
+}
+
+@media screen and (max-width: 600px) {
+    #projectdetailholder {
+        flex-direction: column;
+    }
+
+    #projectdetailimage {
+        height: 33%;
+        width: 100%;
+    }
+
+    #projectdetailinfo {
+        height: 67%;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .active {
-    transition: opacity .5s linear 0s, height 0s linear 0s, width 0s linear 0s, padding 0s linear 0s, font-size 0s linear 0s;
-    opacity: 1;
+    transition: opacity .5s linear 0s, height 0s linear 0s, width 0s linear 0s, padding 0s linear 0s, font-size 0s linear 0s !important;
+    opacity: 1 !important;
 }
 
 .inactive {
@@ -603,7 +692,8 @@ a:hover .larr{
 
 .dontscroll {
     overflow: hidden;
-} */
+}
+
 
 
 
@@ -850,3 +940,24 @@ a:hover .larr{
         height: calc(100% + 150px);
     }
 }
+
+
+/* For project page testing */
+/* section {
+    background-color: #894DA5 !important;
+}
+section nav {
+    animation: none !important;
+    opacity: 1 !important;
+}
+section .navcurrent {
+    color: #894DA5 !important;
+    background-color: #06AED5 !important;
+}
+section li a {
+    color: #06AED5 !important;
+}
+section li a:hover {
+    color: #894DA5 !important;
+    background-color: #06AED5 !important;
+} */
