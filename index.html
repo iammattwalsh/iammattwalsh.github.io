@@ -29,12 +29,15 @@
 	<meta property="og:description" content="Developer portfolio for Matt Walsh, full-stack web developer.">
 
 	<!-- any other script or link tags you might need -->
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="https://unpkg.com/vue@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
-<body>
-    <main>
+<body id="app">
+    <main :class="{ dontscroll : projectOpen }">
         <section>
             <div class="fullpage">
                 <div id="top" class="container">
@@ -168,7 +171,53 @@
         <section>
             <div class="fullpage">
                 <div id="projects" class="container">
-                    <img src="images/uc.gif" alt="under construction">
+                    <div id="project-holder">
+                        <div class="project-page" v-for="page in projectAssets">
+                            <div class="project-thumb" v-for="each in page">
+                                <a href="#" @click="whichProject(each), projectFade()">
+                                    <figure>
+                                        <p class="project-desc-short">{{ each.preDesc }}</p>
+                                        <img :src="'projectassets/' + each.short + 'thumb.png'" :alt="'Thumbnail preview for ' + each.name">
+                                        <figcaption>
+                                            <p>
+                                                {{ each.name }}
+                                            </p>
+                                            <div></div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="#" id="larr" @click="changeProjectPage('l')">
+                            <svg height="50" width="30" :class="{ arrdisable : projectPageCurrent == 1 }">
+                                <polyline class="larr" points="25,5 10,25 25,45" />
+                            </svg>
+                        </a>
+                        <p :class="{ arrdisable : projectPagesTotal == 1 }">page {{ projectPageCurrent }}/{{ projectPagesTotal }}</p>
+                        <a href="#" id="rarr" @click="changeProjectPage('r')">
+                            <svg height="50" width="30" :class="{ arrdisable : projectPageCurrent == projectPagesTotal }">
+                                <polyline class="rarr" points="5,5 20,25 5,45" />
+                            </svg>
+                        </a>
+                    </div>
+
+
+
+
+<!-- Pardon the mess, I'm playing with layouts and transitions!
+                    <div class="test" :class="[ projectOpen ? 'active' : 'inactive' ]">
+                        <div class="test2" id="testtest" :class="[ projectOpen ? 'active' : 'inactive' ]">
+                            <img src="projectassets/topotrail.png" alt="TopoTrail preview image">
+                            <h1 :class="[ projectOpen ? 'active' : 'inactive' ]">TopoTrail</h1>
+                            <a href="#" @click="projectFade">close!!!</a>
+                        </div>
+                    </div> 
+-->
+
+
+
                 </div>
                 <nav>
                     <ul>

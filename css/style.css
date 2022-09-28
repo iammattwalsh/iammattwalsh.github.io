@@ -16,6 +16,9 @@ colors
 
 body {
     background-color: #061826;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -145,12 +148,6 @@ p {
     100% {color: #F05365; opacity: 1;}
 }
 
-body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
 main {
     position: relative;
     width: 100%;
@@ -176,7 +173,7 @@ section  {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin: 20px;
+    margin: 20px 20px 40px 20px;
 }
 
 .container {
@@ -409,6 +406,215 @@ figcaption {
     transition: .5s;
 }
 
+#projects {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+#project-holder {
+    display: flex;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.project-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    margin-top: 60px;
+}
+
+.project-thumb a {
+    text-decoration: none;
+}
+
+.project-thumb figure {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background-color: #061826;
+}
+
+.project-thumb .project-desc-short {
+    opacity: 0%;
+    color: white;
+    padding: 10px;
+    transition-delay: .5s;
+    transition-duration: .5s;
+}
+
+.project-thumb img {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    transition: .5s;
+}
+
+.project-thumb figcaption {
+    position: absolute;
+    width: 100%;
+    background-color: #061826BF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .5s;
+}
+
+.project-thumb figcaption p {
+    color: #06AED5;
+    margin: 0px;
+    padding: 10px;
+}
+
+.project-thumb a figcaption div {
+    height: calc(100%);
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    transition: .5s;
+}
+
+.project-thumb a:hover figcaption {
+    background-color: #061826;
+    bottom: 200px;
+}
+
+.project-thumb a:hover p {
+    opacity: 100%;
+}
+
+.project-thumb a:hover img {
+    opacity: 0;
+}
+
+.project-thumb a:hover figcaption div {
+    height: calc(100% + 200px);
+    box-shadow: 2px 2px #F05365, 4px 4px #BBBE64, 6px 6px #06AED5;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination p {
+    color: #06AED5;
+    margin: 10px;
+    transition: .5s;
+}
+
+.pagination a {
+    height: 50px;
+    width: 30px;
+}
+
+.pagination a svg {
+    transition: .5s;
+}
+
+.arrdisable {
+    opacity: 0;
+    cursor: default;
+}
+
+.rarr, .larr {
+    fill: none;
+    stroke: #06AED5;
+    stroke-width: 5px;
+    transition: .5s;
+}
+
+a:hover .rarr{
+    filter: drop-shadow(2px 0px #BBBE64) drop-shadow(2px 0px #F05365) drop-shadow(2px 0px white);
+}
+
+a:hover .larr{
+    filter: drop-shadow(-2px 0px #BBBE64) drop-shadow(-2px 0px #F05365) drop-shadow(-2px 0px white);
+}
+
+
+
+
+
+
+
+/* Pardon the mess, I'm playing with layouts and transitions!
+.test {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.test2 {
+    background-color: #061826;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.test2 img {
+    max-height: 100%;
+    width: 50%;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+.test2 h1 {
+    width: 50%;
+    text-align: center;
+}
+
+.test3 {
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}
+
+.active {
+    transition: opacity .5s linear 0s, height 0s linear 0s, width 0s linear 0s, padding 0s linear 0s, font-size 0s linear 0s;
+    opacity: 1;
+}
+
+.inactive {
+    transition: opacity .5s linear 0s, height 0s linear .5s, width 0s linear .5s, padding 0s linear .5s, font-size 0s linear .5s !important;
+    opacity: 0 !important;
+    width: 0% !important;
+    padding: 0px !important;
+    font-size: 0 !important;
+}
+
+.dontscroll {
+    overflow: hidden;
+} */
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1440px) {
     h1 {
         font-size: 8rem;
@@ -519,6 +725,30 @@ figcaption {
     .skilllogo {
         margin: 10px;
     }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -544,6 +774,30 @@ figcaption {
     .skilllogo {
         margin: 10px;
     }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
+    }
 }
 
 @media screen and (max-height: 550px) {
@@ -567,5 +821,32 @@ figcaption {
     }
     #skills figure:last-child {
         margin-bottom: 20px;
+    }
+    .project-thumb p {
+        margin: 0px;
+    }
+    .project-thumb figure {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+    .project-thumb img {
+        height: 150px;
+        width: 150px;
+    }
+    .project-thumb figcaption {
+        font-size: 1rem;
+    }
+    .project-desc-short {
+        font-size: .75rem;
+    }
+    .project-thumb a figcaption div {
+        width: 150px;
+    }
+    .project-thumb a:hover figcaption {
+        bottom: 150px;
+    }
+    .project-thumb a:hover figcaption div {
+        height: calc(100% + 150px);
     }
 }
