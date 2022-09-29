@@ -2,21 +2,88 @@
     {
         "name": "TopoTrail",
         "short": "topotrail",
-        "preDesc": "Django, Vue.js, & Three.js project that parses GPS trail files and a builds 3D mesh with a trail overlay texture."
+        "desc": "Django, Vue.js, & Three.js project that parses GPS trail files and builds a 3D mesh with a trail overlay texture.",
+        "linklive": false,
+        "linkgithub": "https://github.com/iammattwalsh/TopoTrail",
+        "bullets": [
+            "Allows users to view trails on real-world 3D terrain",
+            "Uploaded GEOJSON or GPX trail files generate a mesh and texture for the user",
+            "Gathers USGS satellite heightmap data and processes them through an algorithm to clean up anomalous datum",
+            "Users can rotate, zoom, and pan the 3D mesh in-browser",
+            "Each trail has privacy settings and the ability to upload photos and add comments"
+        ],
+        "frameworks": [
+            "Django 4",
+            "Vue.js 3",
+            "Three.js r144",
+            "Materialize CSS 1"
+        ],
+        "langs": [
+            "Python",
+            "HTML 5",
+            "CSS 3",
+            "JavaScript"
+        ]
     },
     {
         "name": "Hippos R Us",
         "short": "hru",
-        "preDesc": "Materialize CSS exercise to create a fictional company landing page."
+        "desc": "Materialize CSS exercise to create a fictional company homepage.",
+        "linklive": "https://www.iammattwalsh.com/projects/hipposrus/",
+        "linkgithub": "https://github.com/iammattwalsh/iammattwalsh.github.io/tree/main/projects/hipposrus",
+        "bullets": [
+            "Built to familiarize myself with the Materialize CSS framework",
+            "Uses custom icons in addition to those included with Materialize CSS",
+            "Hidden easter egg experiment with CSS keyframe animations - can you find it?"
+        ],
+        "frameworks": [
+            "Materialize CSS 1"
+        ],
+        "langs": [
+            "HTML 5",
+            "CSS 3",
+            "JavaScript (minimal)"
+        ]
     },
     {
         "name": "Ayyy Another To-Do List!",
         "short": "aatdl",
-        "preDesc": "Vue.js to-do list exercise using localStorage to save between sessions."
+        "desc": "Vue.js to-do list exercise using localStorage to save between sessions.",
+        "linklive": "https://github.com/iammattwalsh/iammattwalsh.github.io/tree/main/projects/ayyyanothertodolist",
+        "linkgithub": "https://www.iammattwalsh.com/projects/drinkdecider2000/",
+        "bullets": [
+            "Vue.js Single Page Application - no refreshes needed",
+            "Uses your browser's localStorage to save items and their status, even if you close the page",
+            "Simple, clean, & colorful interface"
+        ],
+        "frameworks": [
+            "Vue.js 3"
+        ],
+        "langs": [
+            "HTML 5",
+            "CSS 3",
+            "JavaScript"
+        ]
     },
     {
         "name": "Drink Decider 2000",
         "short": "dd2k",
-        "preDesc": "Vue.js exercise using Axios for API calls and experiment with accordion panel layout."
+        "desc": "Vue.js exercise using Axios for API calls and experiment with accordion panel layout.",
+        "linklive": "https://github.com/iammattwalsh/iammattwalsh.github.io/tree/main/projects/drinkdecider2000",
+        "linkgithub": "https://github.com/iammattwalsh/TopoTrail",
+        "bullets": [
+            "Experiment with 3-panel accordion layout",
+            "Vue.js Single Page Application - no refreshes needed",
+            "Uses API calls to populate data",
+            "Uses your browser's localStorage to save ingredients and reciples, even if you close the page"
+        ],
+        "frameworks": [
+            "Vue.js 3"
+        ],
+        "langs": [
+            "HTML 5",
+            "CSS 3",
+            "JavaScript"
+        ]
     }
 ]

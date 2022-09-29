@@ -557,11 +557,29 @@ a:hover .larr{
     z-index: 9999;
 }
 
+#projectdetailholder p {
+    color: white;
+}
+
 #projectdetailimage {
-    background-color: #06AED581;/**/
     height: 100%;
     width: 50%;
     transition: opacity .5s;
+}
+
+#projectdetailimage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 0px;
+}
+
+#projectimagelg {
+    display: unset;
+}
+
+#projectimagesm {
+    display: none;
 }
 
 #projectdetailinfo {
@@ -570,6 +588,20 @@ a:hover .larr{
     height: 100%;
     width: 50%;
     transition: opacity .5s;
+    padding-top: 10px;
+}
+
+#projectdetailinfo .shortdesc {
+    padding: 0px 10px;
+}
+
+#projectdetailinfo h4 {
+    margin: 15px 0px 5px 0px;
+}
+
+#projectdetailinfo ul {
+    line-height: 1.5rem;
+    margin: 0px;
 }
 
 .projectfade {
@@ -592,7 +624,8 @@ a:hover .larr{
 
 #projectinfo {
     flex: 1 1 auto;
-    padding: 10px;
+    overflow-y: scroll;
+    padding: 0px 10px;
 }
 
 #projectdetailholder .pagination {
@@ -615,8 +648,6 @@ a:hover .larr{
     margin: 5px;
     width: calc(100% - 30px);
 }
-
-/* will change so text is centered in element, aligned to edges */
 
 #larrproj {
     width: 40%;
@@ -652,31 +683,6 @@ a:hover .larr{
     filter: drop-shadow(-2px 0px #BBBE64) drop-shadow(-2px 0px #894DA5) drop-shadow(-2px 0px #06AED5);
 }
 
-@media screen and (max-width: 600px) {
-    #projectdetailholder {
-        flex-direction: column;
-    }
-
-    #projectdetailimage {
-        height: 33%;
-        width: 100%;
-    }
-
-    #projectdetailinfo {
-        height: 67%;
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 .active {
     transition: opacity .5s linear 0s, height 0s linear 0s, width 0s linear 0s, padding 0s linear 0s, font-size 0s linear 0s !important;
     opacity: 1 !important;
@@ -693,17 +699,6 @@ a:hover .larr{
 .dontscroll {
     overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 1440px) {
     h1 {
@@ -789,6 +784,23 @@ a:hover .larr{
     }
     figcaption {
         font-size: .75rem;
+    }
+    #projectdetailholder {
+        flex-direction: column;
+    }
+    #projectdetailimage {
+        height: 33%;
+        width: 100%;
+    }
+    #projectimagelg {
+        display: none;
+    }
+    #projectimagesm {
+        display: unset;
+    }
+    #projectdetailinfo {
+        height: 67%;
+        width: 100%;
     }
 }
 
@@ -940,24 +952,3 @@ a:hover .larr{
         height: calc(100% + 150px);
     }
 }
-
-
-/* For project page testing */
-/* section {
-    background-color: #894DA5 !important;
-}
-section nav {
-    animation: none !important;
-    opacity: 1 !important;
-}
-section .navcurrent {
-    color: #894DA5 !important;
-    background-color: #06AED5 !important;
-}
-section li a {
-    color: #06AED5 !important;
-}
-section li a:hover {
-    color: #894DA5 !important;
-    background-color: #06AED5 !important;
-} */
