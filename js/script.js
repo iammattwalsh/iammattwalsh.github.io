@@ -91,6 +91,8 @@ createApp({
             let projectKeys = Object.keys(this.projectAssets)
             let thisProjectIndex = projectKeys.indexOf(thisProject)
             this.projectCurrent = this.projectAssets[thisProject]
+            this.projectCurrent.img = 'projectassets/' + this.projectCurrent.short + '.png'
+            this.projectCurrent.imgsm = 'projectassets/' + this.projectCurrent.short + 'sm.png'
             if (thisProjectIndex < projectKeys.length - 1) {
                 this.projectNext = this.projectAssets[projectKeys[thisProjectIndex + 1]]
             } else {

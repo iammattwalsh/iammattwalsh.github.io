@@ -35,7 +35,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
-
 <body id="app">
     <main :class="{ dontscroll : projectOpen }">
         <section>
@@ -202,27 +201,30 @@
                             </svg>
                         </a>
                     </div>
-
-
-
-
-<!-- Hidden while completing -->
-                    <!-- <div id="projectdetailholder" :class="[ projectOpen ? 'active' : 'inactive' ]">
+                    <div id="projectdetailholder" :class="projectOpen ? 'active' : 'inactive'">
                         <div id="projectdetailimage" :class="{ projectfade : projectDetailFade }">
-
+                            <img id="projectimagelg" :src="projectCurrent ? projectCurrent.img : ''" :alt="'Preview image for ' + projectCurrent.name" :class="projectOpen ? 'active' : 'inactive'">
+                            <img id="projectimagesm" :src="projectCurrent ? projectCurrent.imgsm : ''" :alt="'Preview image for ' + projectCurrent.name" :class="projectOpen ? 'active' : 'inactive'">
                         </div>
                         <div id="projectdetailinfo" :class="{ projectfade : projectDetailFade }">
                             <h2>{{ projectCurrent.name }}</h2>
                             <div id="projectlinks">
-                                <a href="#">Visit {{ projectCurrent.name }}</a>
-                                <a href="#">View on GitHub</a>
+                                <a :href="projectCurrent.linklive" v-if="projectCurrent.linklive != false" target="_blank" rel="noopener noreferrer">Visit {{ projectCurrent.name }}</a>
+                                <a :href="projectCurrent.linkgithub" v-if="projectCurrent.linkgithub != false" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                             </div>
+                            <p class="shortdesc">{{ projectCurrent.desc }}</p>
                             <div id="projectinfo">
-                                <p>blah blah blah</p>
+                                <h4>Info:</h4>
                                 <ul>
-                                    <li>one</li>
-                                    <li>two</li>
-                                    <li>three</li>
+                                    <li v-for="point in projectCurrent.bullets">{{ point }}</li>
+                                </ul>
+                                <h4 v-if="projectCurrent.frameworks">Frameworks used:</h4>
+                                <ul v-if="projectCurrent.frameworks">
+                                    <li v-for="framework in projectCurrent.frameworks">{{ framework }}</li>
+                                </ul>
+                                <h4>Languages used:</h4>
+                                <ul>
+                                    <li v-for="lang in projectCurrent.langs">{{ lang }}</li>
                                 </ul>
                             </div>
                             <div class="pagination">
@@ -249,10 +251,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div> -->
-
-
-
+                    </div>
                 </div>
                 <nav>
                     <ul>
@@ -305,5 +304,4 @@
         </section>
     </main>
 </body>
-
 </html>
