@@ -175,7 +175,7 @@
                             <div class="project-thumb" v-for="each in page">
                                 <a href="#" @click="whichProject(each), projectFade()">
                                     <figure>
-                                        <p class="project-desc-short">{{ projectAssets[each].preDesc }}</p>
+                                        <p class="project-desc-short">{{ projectAssets[each].desc }}</p>
                                         <img :src="'projectassets/' + projectAssets[each].short + 'thumb.png'" :alt="'Thumbnail preview for ' + projectAssets[each].name">
                                         <figcaption>
                                             <p>
