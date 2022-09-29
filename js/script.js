@@ -12,8 +12,7 @@ createApp({
             projectPageHolder: null,
             projectPagesTotal: 1,
             projectPageCurrent: 1,
-            projectOpen: false, //uncomment after testing
-            // projectOpen: true, // delete after testing
+            projectOpen: false,
             projectCurrent: {},
             projectNext: {},
             projectPrev: {},
@@ -106,17 +105,15 @@ createApp({
         },
         projectFade() {
             this.projectOpen = !this.projectOpen
-            // this.projectOpen = true
         },
-        projectTrans(asdf) {
-            this.projectDetailFade = true
-            setTimeout(() => {
-                this.whichProject(asdf)
-                this.projectDetailFade = false
-            },500)
+        projectTrans(transitionTo) {
+            if (transitionTo) {
+                this.projectDetailFade = true
+                setTimeout(() => {
+                    this.whichProject(transitionTo)
+                    this.projectDetailFade = false
+                },500)
+            }
         },
     }
 }).mount('#app')
-
-
-// on scrolling highlight close button on projects page
