@@ -53,7 +53,7 @@ createApp({
                 url: 'projectassets.json',
             }).then(res => {
                 this.rawAssets = Object.values(res.data)
-                Object.values(res.data).forEach(e => {
+                this.rawAssets.forEach(e => {
                     this.projectAssets[e.short] = e
                 })
                 this.projectTileTotal = this.rawAssets.length
@@ -90,15 +90,23 @@ createApp({
             let projectKeys = Object.keys(this.projectAssets)
             let thisProjectIndex = projectKeys.indexOf(thisProject)
             this.projectCurrent = this.projectAssets[thisProject]
-            this.projectCurrent.img = 'projectassets/' + this.projectCurrent.short + '.png'
-            this.projectCurrent.imgsm = 'projectassets/' + this.projectCurrent.short + 'sm.png'
+            this.projectCurrent.img = `projectassets/${this.projectCurrent.short}.png`
+            this.projectCurrent.imgsm = `projectassets/${this.projectCurrent.short}sm.png`
             if (thisProjectIndex < projectKeys.length - 1) {
                 this.projectNext = this.projectAssets[projectKeys[thisProjectIndex + 1]]
+                let nextLg = new Image()
+                let nextSm = new Image()
+                nextLg.src = `projectassets/${this.projectNext.short}.png`
+                nextSm.src = `projectassets/${this.projectNext.short}sm.png`
             } else {
                 this.projectNext = false
             }
             if (thisProjectIndex > 0) {
                 this.projectPrev = this.projectAssets[projectKeys[thisProjectIndex - 1]]
+                let prevLg = new Image()
+                let prevSm = new Image()
+                prevLg.src = `projectassets/${this.projectPrev.short}.png`
+                prevSm.src = `projectassets/${this.projectPrev.short}sm.png`
             } else {
                 this.projectPrev = false
             }
