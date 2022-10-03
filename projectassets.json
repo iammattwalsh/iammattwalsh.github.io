@@ -13,15 +13,15 @@
             "Each trail has privacy settings and the ability to upload photos and add comments"
         ],
         "frameworks": [
-            "Django 4",
-            "Vue.js 3",
-            "Three.js r144",
-            "Materialize CSS 1"
+            "Django",
+            "Vue.js",
+            "Three.js",
+            "Materialize CSS"
         ],
         "langs": [
             "Python",
-            "HTML 5",
-            "CSS 3",
+            "HTML",
+            "CSS",
             "JavaScript"
         ]
     },
@@ -37,11 +37,11 @@
             "Hidden easter egg experiment with CSS keyframe animations - can you find it?"
         ],
         "frameworks": [
-            "Materialize CSS 1"
+            "Materialize CSS"
         ],
         "langs": [
-            "HTML 5",
-            "CSS 3",
+            "HTML",
+            "CSS",
             "JavaScript (minimal)"
         ]
     },
@@ -57,11 +57,11 @@
             "Simple, clean, & colorful interface"
         ],
         "frameworks": [
-            "Vue.js 3"
+            "Vue.js"
         ],
         "langs": [
-            "HTML 5",
-            "CSS 3",
+            "HTML",
+            "CSS",
             "JavaScript"
         ]
     },
@@ -78,11 +78,11 @@
             "Uses your browser's localStorage to save ingredients and reciples, even if you close the page"
         ],
         "frameworks": [
-            "Vue.js 3"
+            "Vue.js"
         ],
         "langs": [
-            "HTML 5",
-            "CSS 3",
+            "HTML",
+            "CSS",
             "JavaScript"
         ]
     },
