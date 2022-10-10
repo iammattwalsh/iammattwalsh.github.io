@@ -26,6 +26,27 @@
         ]
     },
     {
+        "name": "Tile Tapper",
+        "short": "tiletap",
+        "desc": "Vue.js Single Page Application game that displays tiles with matching colors and one uniquely-colored tile.",
+        "linklive": "https://www.iammattwalsh.com/projects/tiletapper/",
+        "linkgithub": "https://github.com/iammattwalsh/colortiles",
+        "bullets": [
+            "Creates 6 tiles on the game board - 5 matching and 1 unique",
+            "Automatically generates a primary color, complementary color, and a unique color",
+            "With each round, the unique color is increasingly similar to the primary color",
+            "Saves stats to localStorage after each game"
+        ],
+        "frameworks": [
+            "Vue.js"
+        ],
+        "langs": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
         "name": "Hippos R Us",
         "short": "hru",
         "desc": "Materialize CSS exercise to create a fictional company homepage.",
